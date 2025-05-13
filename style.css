@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dancing+Script:wght@400..700&family=Tagesschrift&display=swap');
+/*============================
+    Making variable & basics
+==============================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    list-style:none;
+    text-decoration:none;
+    outline: none;
+    resize: none;
+}
+:root{
+    --color-primary:#ffff;
+    --color-secondary:#d36dac;
+    --color-tertiary:#777;
+    --color-text:#111;
+    --shadow: 0 2px 40px 8px rgba(15,15,15, .15);
+    --transition: all .4s ease-in-out;
+
+    --width-lg: 85%;
+    --width-sm: 95%;
+}
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style:italic;
+    font-weight: 150px;
+    color: var(--color-text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    height: 111vh;
+}
+::-webkit-scrollbar{
+    height: .5rem;
+    width: .5rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--color-primary);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--color-secondary);
+}
+img{
+    display: black;
+    width: 100%;
+    object-fit: cover;
+}
+a{
+    color: var(--color-text);
+}
+span{
+    font-size: .9rem;
+}
+h1,h2{
+    line-height: 1.2;
+}
+h1{
+    font-size: 2.6rem;
+}
+h2{
+    font-size: 2rem;
+}
+.container{
+    margin: 0 auto;
+    width: var(--width-lg);
+}
+section{
+    padding: 6rem 0 3rem;
+}
+section{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+/*===========================
+      NAVBAR
+============================*/
+nav{
+    background: var(--color-text);
+    color: var(--color-primary) !important;
+}
+.logo{
+    color: var(--color-primary);
+    padding: 1rem 0;
+}
+.logo div:first-child{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1;
+}
+.logo div:first-child span{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--color-secondary);
+}  
+.logo div:last-child {
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: .7rem;
+    letter-spacing: .23rem;
+    color:#999;
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .navlist{
+    display: flex;
+}
+nav .navlist{
+    text-transform: uppercase;
+    font-size: .9rem;
+    cursor: pointer;
+    z-index: 111;
+}
+nav .navlist li a{
+    color: var(--color-primary);
+    padding: 2rem;
+    position: relative;
+}
+.navlist li a::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-secondary);
+    height: 0%;
+    width: 100%;
+    border-bottom: .2rem solid var(--color-primary);
+    z-index: -1;
+    transition: var(--transition);
+    opacity: 0;
+    visibility: hidden;
+}
+.navlist li a:hover::before,
+.navlist li a.active::before
+{
+    height: 95%;
+    opacity: 1;
+    visibility: visible;
+}
+.menu-btn .lnr{
+    font-size: 1.1rem;
+}
+.nav-icons{
+    display: flex;
+    gap: 2rem;
+}
+.nav-icons .lnr{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.nav-icons .lnr:hover{
+    color: var(--color-secondary);
+}
+/*================================
+            HOME
+=================================*/
+.home{
+    padding: 0;
+}
+.home h1{ 
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family:'Times New Roman', Times, serif;
+    color:#111111;
+    background-color:#e949ac;
+}
+.img container{
+    width: 100%;
+    height: 100%;
+}
+/*=================================
+        SHOPPING
+==================================*/
+.resize-photo{
+width: 30%;
+height: 30%;
+object-fit: cover;
+border-radius: 10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
+/*=================================
+        ABOUT
+==================================*/
+.about-container .right{
+    position: relative;
+}
+.about-container .right::before{
+    content:'';
+    position: absolute;
+    height: -2px;
+    width: -9px;
+    top: 2rem;
+    right: 8rem;
+    z-index: 1;
+}
+.about-container{
+    display: grid;
+    grid-template-columns:5fr 1fr
+}
+/*=================================
+        SERVICES
+==================================*/
+.services{
+    background: #f8f8f8;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.service-container .col info{
+    padding: 1rem 1.5rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 3rem);
+    transition-duration: .3s;
+}
+.services-container .col h4{
+    text-transform: uppercase;
+    font-size: 1.5 rem;
+    font-weight: 300;
+    line-height: 1;
+    /*color: var(--color-secondary)*/
+}
+.service-container col ul{
+    display: flex;
+    gap: 2rem;
+    color: var(--color-tertiary);
+    font-size: 1.2rem;
+}
+.services-container ul .dis{
+    text-decoration: line-through;
+    color: var(--color-secondary);
+}
+.services-container .col a{
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    transition: var(--transition);
+}
+.services-container .col:hover .info{
+    background: var(--color-primary);
+    box-shadow: var(--shadow);
+    top: 2.2rem;
+}
+
+
