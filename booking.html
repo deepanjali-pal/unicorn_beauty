@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Appointment - Unicorn Beauty</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div>Unicorn<span>Beauty</span></div>
+                <div>Hair & Beauty</div>
+            </a>
+            <ul class="navlist" id="navlist">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#shop">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="booking.html" class="active">Booking</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="menu-btn" id="menu-btn">
+                    <span class="lnr lnr-menu"></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="booking" id="booking">
+        <div class="title">
+            <h2>Book an Appointment</h2>
+        </div>
+        <p style="text-align:center; max-width:500px; margin:0 auto 2rem; color:#555;">Fill out the form below to book your beauty appointment with us. We look forward to serving you!</p>
+        <form class="booking-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <select required>
+                <option value="">Select Service</option>
+                <option value="Makeup">Makeup</option>
+                <option value="Hair Styling">Hair Styling</option>
+                <option value="Spa & Wellness">Spa & Wellness</option>
+                <option value="Skin Care">Skin Care</option>
+            </select>
+            <input type="date" required>
+            <input type="time" required>
+            <button type="submit" class="btn-primary">Book Now</button>
+        </form>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Unicorn Beauty. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,77 +1,51 @@
- body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
-
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 5,
-          spaceBetween: 50,
-        },
-      },
+// Mobile menu toggle
+const menuBtn = document.getElementById('menu-btn');
+const navlist = document.getElementById('navlist');
+if (menuBtn && navlist) {
+    menuBtn.addEventListener('click', () => {
+        navlist.classList.toggle('open');
     });
-  </script>
+}
+
+// (Optional) Smooth scroll for anchor links
+const links = document.querySelectorAll('a[href^="#"]');
+for (const link of links) {
+    link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+            navlist.classList.remove('open'); // close menu on mobile after click
+        }
+    });
+}
+
+// Feedback form thank you animation
+const feedbackForm = document.getElementById('feedbackForm');
+if (feedbackForm) {
+    feedbackForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        feedbackForm.classList.add('thankyou');
+        setTimeout(() => {
+            feedbackForm.classList.remove('thankyou');
+            feedbackForm.reset();
+        }, 2000);
+    });
+}
+
+// Service list expand/collapse
+const serviceItems = document.querySelectorAll('.service-item');
+serviceItems.forEach(item => {
+    item.addEventListener('click', function(e) {
+        // Close others
+        serviceItems.forEach(i => { if(i !== item) i.classList.remove('active'); });
+        // Toggle this one
+        item.classList.toggle('active');
+    });
+    item.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            item.click();
+        }
+    });
+});

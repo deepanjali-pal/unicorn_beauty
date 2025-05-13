@@ -5,94 +5,149 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="style.css">
-        <title>MAKEUP WEBSITE</title>
+    <title>Unicorn Beauty</title>
 </head>
 <body>
-    <nav>
+    <nav class="navbar">
         <div class="container nav-container">
-            <a href="#home"class="logo">
-            <div>Unicorn<Span>Beauty</Span></div>
+            <a href="#home" class="logo">
+                <div>Unicorn<span>Beauty</span></div>
                 <div>Hair & Beauty</div>
             </a>
-            <ul class="navlist">
+            <ul class="navlist" id="navlist">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#shopping">Shopping</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="booking">Booking</a></li>
-                <li><a href="#feedback">Feedback</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
             </ul>
             <div class="nav-icons">
-                <div class="menu-btn">
-                 <span class="lnr lnr-menu"></span>   
+                <div class="menu-btn" id="menu-btn">
+                    <span class="lnr lnr-menu"></span>
                 </div>
             </div>
         </div>
     </nav>
-    <!--=====================================
-                   HOME
-    =====================================-->
-    <section class="home" id="home">
-        <div class="home-container">
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to Unicorn Beauty</h1>
+            <p>Enhance your beauty with our premium products and services.</p>
+            <a href="booking.html" class="btn-primary">Book Appointment</a>
         </div>
-        <div class="content"></div>
-        <h1>Welcome to Unique Beauty</h1>
-        <div class="img-container">
-            <img src="img/frontpage.png"width="100%">
+        <div class="hero-img">
+            <img src="img/frontpage.png" alt="Unicorn Beauty" />
         </div>
-    </section>    
-    <!--===================================
-                 SHOPPING
-    =====================================-->
-    <section class="shopping" id="shopping">
-    <div class="title">
-        <h2>Our Product</h2>
-    </div>
-    <div class="container shopping-container">
-      <div class="swiper mySwiper shop-swiper">
-          <div class="swiper-wrapper"></div>     
-             <div class="swiper-slide"></div>
-                <div class="box">
-                   <div class="image">
-                     <img src="img/shopping(2).jpg"alt="">
-         <div class="info">
-            <a href="https://www.nykaa.com/nykaa-cosmetics-matte-to-last-hydra-pore-setting-spray/p/14075610?se=0">Nykaa Matte to long lasting
-                <br> setting spray</a>
-                              <div class="box">
-        <div class="image">
-                     <img src="img/shopping(3).jpg"alt="">
-         <div class="info">
-            <a href="https://www.nykaa.com/nykaa-cosmetics-matte-to-last-hydra-pore-setting-spray/p/14075610?se=0">Nykaa Matte to long lasting
-                <br> setting spray</a>  
-                         <div class="box">
-        <div class="image">
-                     <img src="img/shopping(4).jpg"alt="">
-         <div class="info">
-            <a href="https://www.nykaa.com/nivea-pearl-beauty-deodorant-roll-on-config/p/158700?skuId=2212&se=0"> NIVEA Pearl & Beauty Deodorant
-                <br> Roll On 72H on Nykaa</a></div>
-        <div class="box">
-        <div class="image">
-                     <img src="img/shopping(5).jpg"alt="">
-         <div class="info">
-            <a href="https://www.nykaa.com/nykaa-cosmetics-matte-to-last-hydra-pore-setting-spray/p/14075610?se=0">Nykaa Matte to long lasting
-                <br> setting spray</a>
-                        <div class="box">
-         <div class="image">
-                     <img src="img/shopping(6).jpg"alt="">
-         <div class="info">
-            <a href="https://www.nykaa.com/nykaa-cosmetics-matte-to-last-hydra-pore-setting-spray/p/14075610?se=0">Nykaa Matte to long lasting
-                <br> setting spray</a>              
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-        </section>
-       <!--=============================
-                   BOOKING
-           ============================-->
-           <section>
-                 
-           </section> 
-    <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    </section>
+    <section class="shop" id="shop">
+        <div class="title">
+            <h2>Our Products</h2>
+        </div>
+        <div class="shop-grid">
+            <!-- Example product card -->
+            <div class="product-card">
+                <img src="img/shopping(2).jpg" alt="Product 1">
+                <h3>Nykaa Matte Setting Spray</h3>
+                <a href="https://www.nykaa.com/nykaa-cosmetics-matte-to-last-hydra-pore-setting-spray/p/14075610?se=0" target="_blank">View Product</a>
+            </div>
+            <div class="product-card">
+                <img src="img/shopping(3).jpg" alt="Product 2">
+                <h3>Nykaa Matte Setting Spray</h3>
+                <a href="https://www.nykaa.com/nykaa-cosmetics-matte-to-last-hydra-pore-setting-spray/p/14075610?se=0" target="_blank">View Product</a>
+            </div>
+            <div class="product-card">
+                <img src="img/shopping(4).jpg" alt="Product 3">
+                <h3>NIVEA Pearl & Beauty Deodorant</h3>
+                <a href="https://www.nykaa.com/nivea-pearl-beauty-deodorant-roll-on-config/p/158700?skuId=2212&se=0" target="_blank">View Product</a>
+            </div>
+            <div class="product-card">
+                <img src="img/shopping(5).jpg" alt="Product 4">
+                <h3>Nykaa Matte Setting Spray</h3>
+                <a href="https://www.nykaa.com/nykaa-cosmetics-matte-to-last-hydra-pore-setting-spray/p/14075610?se=0" target="_blank">View Product</a>
+            </div>
+            <div class="product-card">
+                <img src="img/shopping(6).jpg" alt="Product 5">
+                <h3>Nykaa Matte Setting Spray</h3>
+                <a href="https://www.nykaa.com/nykaa-cosmetics-matte-to-last-hydra-pore-setting-spray/p/14075610?se=0" target="_blank">View Product</a>
+            </div>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="title">
+            <h2>Our Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="lnr lnr-magic-wand"></span>
+                <h3>Makeup</h3>
+                <p>Professional makeup for all occasions.</p>
+            </div>
+            <div class="service-card">
+                <span class="lnr lnr-cut"></span>
+                <h3>Hair Styling</h3>
+                <p>Trendy haircuts and styling by experts.</p>
+            </div>
+            <div class="service-card">
+                <span class="lnr lnr-leaf"></span>
+                <h3>Spa & Wellness</h3>
+                <p>Relaxing spa and wellness treatments.</p>
+            </div>
+            <div class="service-card">
+                <span class="lnr lnr-brush"></span>
+                <h3>Skin Care</h3>
+                <p>Facials, cleanups, and skin therapies.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Service List Section -->
+    <section class="service-list" id="service-list">
+        <div class="title">
+            <h2>Service List</h2>
+        </div>
+        <ul class="service-list-ul">
+            <li class="service-item" tabindex="0">
+                <span class="lnr lnr-magic-wand"></span> <strong>Makeup:</strong> Bridal, party, and everyday makeup services for all occasions.
+                <ul class="sub-services">
+                    <li>Bridal Makeup</li>
+                    <li>Party Makeup</li>
+                    <li>Everyday/Natural Makeup</li>
+                    <li>Eye Makeup</li>
+                </ul>
+            </li>
+            <li class="service-item" tabindex="0">
+                <span class="lnr lnr-cut"></span> <strong>Hair Styling:</strong> Haircuts, styling, coloring, and treatments by professionals.
+                <ul class="sub-services">
+                    <li>Haircut & Trimming</li>
+                    <li>Hair Coloring</li>
+                    <li>Hair Spa</li>
+                    <li>Hair Straightening/Curling</li>
+                </ul>
+            </li>
+            <li class="service-item" tabindex="0">
+                <span class="lnr lnr-leaf"></span> <strong>Spa & Wellness:</strong> Relaxing massages, spa therapies, and wellness packages.
+                <ul class="sub-services">
+                    <li>Full Body Massage</li>
+                    <li>Head & Shoulder Massage</li>
+                    <li>Body Scrub</li>
+                    <li>Detox Treatments</li>
+                </ul>
+            </li>
+            <li class="service-item" tabindex="0">
+                <span class="lnr lnr-brush"></span> <strong>Skin Care:</strong> Facials, cleanups, skin rejuvenation, and more.
+                <ul class="sub-services">
+                    <li>Facials</li>
+                    <li>Cleanups</li>
+                    <li>Anti-Aging Treatments</li>
+                    <li>Acne Treatments</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Unicorn Beauty. All rights reserved.</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
