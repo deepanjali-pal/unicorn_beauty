@@ -520,29 +520,112 @@ footer {
     padding: 2rem 0 3rem 0;
 }
 .service-list-ul {
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+    max-width: 950px;
     margin: 0 auto;
     padding: 0;
     list-style: none;
+}
+@media (max-width: 800px) {
+    .service-list-ul {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+}
+.service-item {
+    cursor: pointer;
+    position: relative;
+    background: #f8f8f8;
+    border-radius: 1.2rem;
+    padding: 2rem 1.5rem 1.2rem 1.5rem;
+    box-shadow: 0 2px 16px rgba(233,73,172,0.07);
+    margin-bottom: 0;
+    transition: box-shadow 0.2s, background 0.2s, transform 0.2s;
+    display: block;
+    min-height: 180px;
     text-align: left;
 }
-.service-list-ul li {
-    font-size: 1.1rem;
-    margin-bottom: 1.2rem;
-    background: #f8f8f8;
-    border-radius: 0.7rem;
-    padding: 1rem 1.5rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
+.service-item:hover, .service-item:focus, .service-item.active {
+    box-shadow: 0 6px 24px rgba(233,73,172,0.13);
+    background: #ffe6fa;
+    transform: translateY(-4px) scale(1.02);
+    transition: background 0.3s, transform 0.2s;
 }
-.service-list-ul li span {
-    font-size: 1.5rem;
+.sub-services {
+    width: 100%;
+    margin-top: 1.2rem;
+    background: #ffe6fa;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 8px rgba(233,73,172,0.07);
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    display: block;
+    box-sizing: border-box;
+}
+.service-item.active .sub-services {
+    max-height: 400px;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    background: #ffe6fa;
+    margin-top: 1.2rem;
+    box-shadow: 0 2px 8px rgba(233,73,172,0.07);
+}
+.sub-services li {
     color: #e949ac;
+    font-weight: 500;
+    font-size: 1rem;
+    background: #fff;
+    border-radius: 0.6rem;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    margin: 0.5rem 0;
+    box-shadow: 0 1px 4px rgba(233,73,172,0.04);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
-.service-list-ul li strong {
-    color: #d36dac;
+.book-service-btn {
+    margin: 0.3rem 0 0 0;
+    background: #e949ac;
+    color: #fff;
+    border: none;
+    border-radius: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 1px 4px rgba(233,73,172,0.08);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.book-service-btn:hover, .book-service-btn:focus {
+    background: #d36dac;
+    transform: scale(1.05);
+}
+@media (max-width: 600px) {
+    .service-list-ul {
+        gap: 1rem;
+    }
+    .service-item {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    .sub-services {
+        padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    }
+    .sub-services li {
+        font-size: 1.05rem;
+        padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+    }
+    .book-service-btn {
+        width: 100%;
+        font-size: 1.1rem;
+    }
 }
 
 .feedback {
@@ -664,31 +747,51 @@ footer {
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     margin-bottom: 1.2rem;
     transition: box-shadow 0.2s, background 0.2s;
+    display: block;
 }
-.service-item:hover, .service-item:focus {
+.service-item:hover, .service-item:focus, .service-item.active {
     box-shadow: 0 4px 16px rgba(233,73,172,0.10);
-    background: #fff0fa;
+    background: #ffe6fa;
+    transition: background 0.3s;
 }
 .sub-services {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1);
-    margin-top: 0.5rem;
-    margin-left: 2.2rem;
-    background: #fff;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+    margin-top: 0;
+    margin-left: 0;
+    background: transparent;
     border-radius: 0.5rem;
-    box-shadow: 0 2px 8px rgba(233,73,172,0.07);
-    padding: 0 1rem;
+    box-shadow: none;
+    padding: 0 0;
+    width: 100%;
+    display: block;
 }
 .service-item.active .sub-services {
     max-height: 300px;
-    padding: 0.7rem 1rem 0.7rem 1rem;
+    padding: 0.7rem 0 0.7rem 2.2rem;
+    background: #fff0fa;
+    margin-top: 0.7rem;
+    box-shadow: 0 2px 8px rgba(233,73,172,0.07);
 }
 .sub-services li {
     color: #e949ac;
     font-weight: 500;
     margin-bottom: 0.3rem;
     font-size: 1rem;
+    background: #fff;
+    border-radius: 0.4rem;
+    padding: 0.5rem 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0.3rem;
+    box-shadow: 0 1px 4px rgba(233,73,172,0.04);
+    width: fit-content;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
 }
 .service-item strong {
     color: #d36dac;
@@ -698,6 +801,39 @@ footer {
     font-size: 1.3rem;
     color: #e949ac;
     margin-right: 0.5rem;
+}
+
+.book-service-btn {
+    margin-left: 0;
+    margin-top: 0.3rem;
+    background: #e949ac;
+    color: #fff;
+    border: none;
+    border-radius: 1.2rem;
+    padding: 0.4rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 1px 4px rgba(233,73,172,0.08);
+    display: inline-block;
+}
+.book-service-btn:hover, .book-service-btn:focus {
+    background: #d36dac;
+    transform: scale(1.05);
+}
+@media (max-width: 600px) {
+    .book-service-btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0 0 0;
+        font-size: 1.1rem;
+    }
+    .sub-services li {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 
