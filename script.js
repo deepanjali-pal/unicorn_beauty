@@ -49,3 +49,13 @@ serviceItems.forEach(item => {
         }
     });
 });
+
+// Book Now button: redirect to booking.html with service pre-filled
+const bookBtns = document.querySelectorAll('.book-service-btn');
+bookBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const service = btn.getAttribute('data-service');
+        window.location.href = `booking.html?service=${encodeURIComponent(service)}`;
+    });
+});

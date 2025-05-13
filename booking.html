@@ -34,16 +34,32 @@
             <h2>Book an Appointment</h2>
         </div>
         <p style="text-align:center; max-width:500px; margin:0 auto 2rem; color:#555;">Fill out the form below to book your beauty appointment with us. We look forward to serving you!</p>
-        <form class="booking-form">
+        <form class="booking-form" id="bookingForm">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <input type="tel" placeholder="Phone Number" required>
-            <select required>
+            <select id="serviceSelect" required>
                 <option value="">Select Service</option>
                 <option value="Makeup">Makeup</option>
                 <option value="Hair Styling">Hair Styling</option>
                 <option value="Spa & Wellness">Spa & Wellness</option>
                 <option value="Skin Care">Skin Care</option>
+                <option value="Bridal Makeup">Bridal Makeup</option>
+                <option value="Party Makeup">Party Makeup</option>
+                <option value="Everyday/Natural Makeup">Everyday/Natural Makeup</option>
+                <option value="Eye Makeup">Eye Makeup</option>
+                <option value="Haircut & Trimming">Haircut & Trimming</option>
+                <option value="Hair Coloring">Hair Coloring</option>
+                <option value="Hair Spa">Hair Spa</option>
+                <option value="Hair Straightening/Curling">Hair Straightening/Curling</option>
+                <option value="Full Body Massage">Full Body Massage</option>
+                <option value="Head & Shoulder Massage">Head & Shoulder Massage</option>
+                <option value="Body Scrub">Body Scrub</option>
+                <option value="Detox Treatments">Detox Treatments</option>
+                <option value="Facials">Facials</option>
+                <option value="Cleanups">Cleanups</option>
+                <option value="Anti-Aging Treatments">Anti-Aging Treatments</option>
+                <option value="Acne Treatments">Acne Treatments</option>
             </select>
             <input type="date" required>
             <input type="time" required>
@@ -56,5 +72,21 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+    // Pre-fill service dropdown if ?service= is present
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get('service');
+    if (service) {
+        const select = document.getElementById('serviceSelect');
+        if (select) {
+            for (const option of select.options) {
+                if (option.value === service) {
+                    option.selected = true;
+                    break;
+                }
+            }
+        }
+    }
+    </script>
 </body>
 </html> 
