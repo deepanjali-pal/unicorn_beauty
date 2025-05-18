@@ -21,17 +21,7 @@ for (const link of links) {
 }
 
 // Feedback form thank you animation
-const feedbackForm = document.getElementById('feedbackForm');
-if (feedbackForm) {
-    feedbackForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        feedbackForm.classList.add('thankyou');
-        setTimeout(() => {
-            feedbackForm.classList.remove('thankyou');
-            feedbackForm.reset();
-        }, 2000);
-    });
-}
+// (Removed: This was preventing form submission to PHP)
 
 // Service list expand/collapse
 const serviceItems = document.querySelectorAll('.service-item');
