@@ -916,4 +916,108 @@ footer {
     }
 }
 
+/* --- Enhanced Form Styles for Booking & Feedback --- */
+.booking-form, .feedback-form {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(211, 109, 172, 0.18), 0 1.5px 8px 0 rgba(0,0,0,0.08);
+    padding: 2.5rem 2rem 2rem 2rem;
+    margin: 2rem auto;
+    max-width: 420px;
+    width: 100%;
+    transition: box-shadow 0.3s;
+    border: 1.5px solid #f7d6ef;
+}
+.booking-form:hover, .feedback-form:hover {
+    box-shadow: 0 12px 40px 0 rgba(211, 109, 172, 0.25), 0 2px 12px 0 rgba(0,0,0,0.10);
+}
+.form-group {
+    margin-bottom: 1.7rem;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #d36dac;
+    font-size: 1.08rem;
+    letter-spacing: 0.01em;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1.5px solid #f7d6ef;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #faf6fa;
+    color: #333;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px 0 rgba(211, 109, 172, 0.04);
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border: 1.5px solid #d36dac;
+    outline: none;
+    background: #fff;
+}
+.form-group textarea {
+    min-height: 120px;
+    max-height: 300px;
+    resize: vertical;
+}
+.btn-primary, .feedback-form button, .booking-form button {
+    background: linear-gradient(90deg, #d36dac 0%, #ff5fcf 100%);
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(211, 109, 172, 0.10);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    margin: 0.5rem 0.5rem 0 0;
+    display: inline-block;
+}
+.btn-primary:hover, .feedback-form button:hover, .booking-form button:hover {
+    background: linear-gradient(90deg, #ff5fcf 0%, #d36dac 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px 0 rgba(211, 109, 172, 0.18);
+}
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    gap: 0.2em;
+    margin-top: 0.2em;
+}
+.rating input {
+    display: none;
+}
+.rating label {
+    cursor: pointer;
+    font-size: 2.1rem;
+    color: #e0b3d6;
+    transition: color 0.2s;
+}
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ff5fcf;
+}
+@media (max-width: 600px) {
+    .booking-form, .feedback-form {
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+        max-width: 98vw;
+    }
+    .btn-primary, .feedback-form button, .booking-form button {
+        width: 100%;
+        margin: 0.5rem 0 0 0;
+    }
+}
+
 

@@ -14,4 +14,14 @@ CREATE TABLE IF NOT EXISTS booking_ub (
     date DATE NOT NULL,
     time TIME NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create the feedback table
+CREATE TABLE IF NOT EXISTS feedback_ub (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    rating INT NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ); 

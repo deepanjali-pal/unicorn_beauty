@@ -1,54 +1,66 @@
-# unicorn_beauty
+# Unicorn Beauty
 
-## How to Start and Run the Project
+## 🚀 How to Run This Project (Step-by-Step)
 
-### Prerequisites
-- PHP (with mysqli extension)
-- MySQL server
-- Web browser
+### 1. Prerequisites
+- **PHP** (with mysqli extension)
+- **MySQL** (database server)
+- **Web browser** (like Chrome, Firefox, Edge)
 
-### 1. Clone or Download the Repository
+### 2. Download or Clone the Project
 ```
 git clone <repo-url>
 cd unicorn_beauty
 ```
+Or just download and unzip the project folder.
 
-### 2. Set Up the Database
+### 3. Set Up the Database
 - Make sure MySQL is running.
-- Import the database schema:
+- Open a terminal in the project folder.
+- Run this command to create the database and tables:
 ```
 mysql -u root -p < setup_database.sql
 ```
-- (Change `root` to your MySQL username if different.)
+- (If your MySQL username is not `root`, change it accordingly.)
 
-### 3. Start the PHP Built-in Server
+### 4. Start the PHP Server
+- In the project folder, run:
 ```
 php -S localhost:8000
 ```
+- Leave this terminal window open while you use the site.
 
-### 4. Open the App in Your Browser
-Go to:
+### 5. Open the Website
+- In your browser, go to:
 ```
 http://localhost:8000/index.html
 ```
-Or directly to the booking page:
-```
-http://localhost:8000/booking.html
-```
+- For booking: `http://localhost:8000/booking.html`
+- For feedback: `http://localhost:8000/feedback.html`
 
-### 5. Booking Form
-- Fill out the booking form on `booking.html`.
-- On submission, you will see a success or error message.
+### 6. Use the Forms
+- **Booking:** Fill out the booking form and submit. You'll see a success or error message.
+- **Feedback:** Fill out the feedback form and submit. You'll see a thank you message.
 
-### 6. Project Structure
-- `index.html` - Home page
-- `booking.html` - Booking form
-- `index.php` - Handles booking form submission
-- `style.css` - Styles
-- `setup_database.sql` - Database schema
-- Other HTML files for About, Feedback, Services, etc.
+### 7. Where is the Data?
+- All bookings go into the `booking_ub` table in your MySQL database.
+- All feedback goes into the `feedback_ub` table.
 
 ---
-**Note:**
-- Do not use VS Code Live Server for PHP files. Use the PHP built-in server as shown above.
-- Make sure your MySQL credentials in `index.php` match your local setup.
+**Tips:**
+- Don't use VS Code Live Server for PHP files. Always use the PHP built-in server as shown above.
+- If you change your MySQL username or password, update it in `index.php` and `feedback.php`.
+- If you have any issues, make sure MySQL and PHP are installed and running.
+
+---
+**Project Structure:**
+- `index.html` - Home page
+- `booking.html` - Booking form
+- `feedback.html` - Feedback form
+- `index.php` - Handles booking form submission
+- `feedback.php` - Handles feedback form submission
+- `style.css` - All styles
+- `setup_database.sql` - Database schema
+- Other HTML files for About, Services, etc.
+
+Enjoy your Unicorn Beauty website! 🦄💅
