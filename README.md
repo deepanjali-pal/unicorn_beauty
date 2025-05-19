@@ -1,4 +1,4 @@
-# Unicorn Beauty
+<!-- # Unicorn Beauty
 
 ## 🚀 How to Run This Project (Step-by-Step)
 
@@ -12,23 +12,25 @@
 git clone <repo-url>
 cd unicorn_beauty
 ```
-Or just download and unzip the project folder.
+Or just download and unzip the project folder. -->
 
 ### 3. Set Up the Database
-- Make sure MySQL is running.
-- Open a terminal in the project folder.
+- Makpwd
+e sure MySQL is running on port 8000.
+- Open a command prompt in the project folder.
 - Run this command to create the database and tables:
 ```
-mysql -u root -p < setup_database.sql
+mysql -u root -p
 ```
-- (If your MySQL username is not `root`, change it accordingly.)
+then enter password - root
+
 
 ### 4. Start the PHP Server
-- In the project folder, run:
+-open command promp and run:
 ```
+cd C:\Users\ktd78\Downloads\unicorn_beauty
 php -S localhost:8000
 ```
-- Leave this terminal window open while you use the site.
 
 ### 5. Open the Website
 - In your browser, go to:
@@ -47,7 +49,7 @@ http://localhost:8000/index.html
 - All feedback goes into the `feedback_ub` table.
 
 ---
-**Tips:**
+<!-- **Tips:**
 - Don't use VS Code Live Server for PHP files. Always use the PHP built-in server as shown above.
 - If you change your MySQL username or password, update it in `index.php` and `feedback.php`.
 - If you have any issues, make sure MySQL and PHP are installed and running.
@@ -63,4 +65,4 @@ http://localhost:8000/index.html
 - `setup_database.sql` - Database schema
 - Other HTML files for About, Services, etc.
 
-Enjoy your Unicorn Beauty website! 🦄💅
+Enjoy your Unicorn Beauty website! 🦄💅 -->

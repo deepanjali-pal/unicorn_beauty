@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 // Database configuration
 $server = "localhost";
 $username = "root";      // Change if you use a different MySQL user
-$password = "root";      // Change if your MySQL user has a password
+$password = "root";      // Updated password to root
 $database = "booking_ub";
 
 // Connect to MySQL

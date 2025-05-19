@@ -19,6 +19,12 @@ for (const link of links) {
         }
     });
 }
+// payment successful message
+document.getElementById('paymentform').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Payment Confirmed! Thank you for booking with Unicorn Beauty.');
+    this.submit(); // Proceed with real submit if needed
+});
 
 // Feedback form thank you animation
 // (Removed: This was preventing form submission to PHP)
